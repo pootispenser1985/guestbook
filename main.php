@@ -1,5 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head></head>
-<body></body>
+<body>
+<?php
+  include '/home/thrashca/etc/guestbook.php';
+
+  echo 'success';
+?>
+
+</body>
 </html>
