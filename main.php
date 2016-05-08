@@ -1,25 +1,35 @@
 <!DOCTYPE html>
 <html>
-<head></head>
+<head>
+  <link rel="stylesheet" type="text/css" href="guestbook.css?v=2002" />
+</head>
 <body>
-<?php
-  include '/home/thrashca/etc/guestbook.php';
-  $db = new mysqli('localhost', $sqlUser, $sqlPass, 'thrashca_guestbook');
+<div id="comments">
+  <?php
+    include '/home/thrashca/etc/guestbook.php';
+    $db = new mysqli('localhost', $sqlUser, $sqlPass, 'thrashca_guestbook');
 
-  $query = "SELECT * FROM posts;";
-  $result = $db->query($query);
+    $query = "SELECT * FROM posts;";
+    $result = $db->query($query);
 
-  echo "<p>";
-  while (2 < 5) {
-    $line = $result->fetch_array();
-    if ($line == NULL) {break;}
-    for ($i=0; $i<4; $i++) {
-      echo $line[$i]." ";
+    echo "<p>";
+    while (2 < 5) {
+      $line = $result->fetch_array();
+      if ($line == NULL) {break;}
+      for ($i=0; $i<4; $i++) {
+        echo $line[$i]." ";
+      }
+      echo "</p><p>";
     }
-    echo "</p><p>";
-  }
-  echo "</p>"
-?>
+    echo "</p>"
+  ?>
+</div>
+
+<p>Add a comment!</p>
+<form action="inserter.php" method="post">
+  <textarea name="comment" rows="5" cols="50"></textarea>
+  <input type="submit" value="submit">
+</form>
 
 </body>
 </html>
