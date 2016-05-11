@@ -21,7 +21,7 @@
     $query = "SELECT * FROM posts ORDER BY id DESC;";
     $result = $db->query($query);
 
-    echo "<p>";
+    echo "<br><br>";
     while (2 < 5) {
       $line = $result->fetch_array();
       if ($line == NULL) {break;}
@@ -30,7 +30,6 @@
       }
       echo "</p><p>";
     }
-    echo "</p>"
   ?>
 </div>
 
