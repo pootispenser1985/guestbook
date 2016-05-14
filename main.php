@@ -5,15 +5,19 @@
 </head>
 <body>
 
-<div id="newComment">
-  <p>Add a comment!</p>
+<div id="container">
+  <div id="menu">
+    <ul>
+      <li><a href="http://www.thrashcan.net">Back</a></li>
+    </ul>
+  </div>
+
+  <div id="centerarea">
   <form action="inserter.php" method="post">
-    <textarea name="comment" rows="5" cols="50"></textarea>
+    <textarea placeholder="Leave a comment! Only one per IP, please." name="comment" rows="5" cols="50"></textarea>
     <input type="submit" value="submit">
   </form>
-</div>
 
-<div id="comments">
   <?php
     include '/home/thrashca/etc/guestbook.php';
     $db = new mysqli('localhost', $sqlUser, $sqlPass, 'thrashca_guestbook');
@@ -31,6 +35,7 @@
       echo "</p><p>";
     }
   ?>
+  </div>
 </div>
 
 
