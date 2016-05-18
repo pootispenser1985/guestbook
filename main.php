@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" type="text/css" href="guestbook.css?v=2002" />
+  <link rel="stylesheet" type="text/css" href="http://www.thrashcan.net/main.css" />
 </head>
 <body>
 
