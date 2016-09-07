@@ -1,15 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" type="text/css" href="http://www.thrashcan.net/main.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12./jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="http://www.thrashcan.net/main.css?version=29"/>
+  <title>Guestbook</title>
 </head>
+
 <body>
-  <div id="container" style="height: 800px;">
-    <div id="menu">
-      <ul>
-        <li><a href="http://www.thrashcan.net/guestbook/main.php">Back</a></li>
-      </ul>
-    </div>
+<div class="container">
+  <nav class="row">
+    <a class="col-sm-1" href="/guestbook/main.php">Guestbook</a>
+    <a class="col-sm-1 col-sm-offset-1" href="#">Placeholder</a>
+    <a class="col-sm-1 col-sm-offset-1" href="/pics/pics.html">Pictures</a>
+    <div class="col-sm-1 col-sm-offset-5"><img src="/pics/dogturd.png"></div>
+    <a class="col-sm-1" href="http://www.thrashcan.net">Thrash</a>
+  </nav>
     <?php
       include '/home/thrashca/etc/guestbook.php';
       $db = new mysqli('localhost', $sqlUser, $sqlPass, 'thrashca_guestbook');
@@ -31,6 +40,6 @@
         (so that there's not an assload of comments)</p>"; //if the user's ip address IS in the db, disallow the comment
       }
     ?>
-  </div>
+</div>
 </body>
 </html>
